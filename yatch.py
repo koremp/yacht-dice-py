@@ -22,88 +22,88 @@ def four_of_a_kind(dice_list):
     return fok
 
 
-def full_house(li):
+def full_house(dice_list):
     fh = 0
-    if li.count(1) == 2:
-        if li.count(2) == 3:
-            fh = sum(li)
-        elif li.count(3) == 3:
-            fh = sum(li)
-        elif li.count(4) == 3:
-            fh = sum(li)
-        elif li.count(5) == 3:
-            fh = sum(li)
-        elif li.count(6) == 3:
-            fh = sum(li)
+    if dice_list.count(1) == 2:
+        if dice_list.count(2) == 3:
+            fh = sum(dice_list)
+        elif dice_list.count(3) == 3:
+            fh = sum(dice_list)
+        elif dice_list.count(4) == 3:
+            fh = sum(dice_list)
+        elif dice_list.count(5) == 3:
+            fh = sum(dice_list)
+        elif dice_list.count(6) == 3:
+            fh = sum(dice_list)
 
-    elif li.count(2) == 2:
-        if li.count(1) == 3:
-            fh = sum(li)
-        elif li.count(3) == 3:
-            fh = sum(li)
-        elif li.count(4) == 3:
-            fh = sum(li)
-        elif li.count(5) == 3:
-            fh = sum(li)
-        elif li.count(6) == 3:
-            fh = sum(li)
+    elif dice_list.count(2) == 2:
+        if dice_list.count(1) == 3:
+            fh = sum(dice_list)
+        elif dice_list.count(3) == 3:
+            fh = sum(dice_list)
+        elif dice_list.count(4) == 3:
+            fh = sum(dice_list)
+        elif dice_list.count(5) == 3:
+            fh = sum(dice_list)
+        elif dice_list.count(6) == 3:
+            fh = sum(dice_list)
 
-    elif li.count(3) == 2:
-        if li.count(1) == 3:
-            fh = sum(li)
-        elif li.count(2) == 3:
-            fh = sum(li)
-        elif li.count(4) == 3:
-            fh = sum(li)
-        elif li.count(5) == 3:
-            fh = sum(li)
-        elif li.count(6) == 3:
-            fh = sum(li)
+    elif dice_list.count(3) == 2:
+        if dice_list.count(1) == 3:
+            fh = sum(dice_list)
+        elif dice_list.count(2) == 3:
+            fh = sum(dice_list)
+        elif dice_list.count(4) == 3:
+            fh = sum(dice_list)
+        elif dice_list.count(5) == 3:
+            fh = sum(dice_list)
+        elif dice_list.count(6) == 3:
+            fh = sum(dice_list)
 
-    elif li.count(4) == 2:
-        if li.count(1) == 3:
-            fh = sum(li)
-        elif li.count(2) == 3:
-            fh = sum(li)
-        elif li.count(3) == 3:
-            fh = sum(li)
-        elif li.count(5) == 3:
-            fh = sum(li)
-        elif li.count(6) == 3:
-            fh = sum(li)
+    elif dice_list.count(4) == 2:
+        if dice_list.count(1) == 3:
+            fh = sum(dice_list)
+        elif dice_list.count(2) == 3:
+            fh = sum(dice_list)
+        elif dice_list.count(3) == 3:
+            fh = sum(dice_list)
+        elif dice_list.count(5) == 3:
+            fh = sum(dice_list)
+        elif dice_list.count(6) == 3:
+            fh = sum(dice_list)
 
-    elif li.count(5) == 2:
-        if li.count(1) == 3:
-            fh = sum(li)
-        elif li.count(2) == 3:
-            fh = sum(li)
-        elif li.count(3) == 3:
-            fh = sum(li)
-        elif li.count(4) == 3:
-            fh = sum(li)
-        elif li.count(6) == 3:
-            fh = sum(li)
+    elif dice_list.count(5) == 2:
+        if dice_list.count(1) == 3:
+            fh = sum(dice_list)
+        elif dice_list.count(2) == 3:
+            fh = sum(dice_list)
+        elif dice_list.count(3) == 3:
+            fh = sum(dice_list)
+        elif dice_list.count(4) == 3:
+            fh = sum(dice_list)
+        elif dice_list.count(6) == 3:
+            fh = sum(dice_list)
 
-    elif li.count(6) == 2:
-        if li.count(1) == 3:
-            fh = sum(li)
-        elif li.count(2) == 3:
-            fh = sum(li)
-        elif li.count(3) == 3:
-            fh = sum(li)
-        elif li.count(4) == 3:
-            fh = sum(li)
-        elif li.count(5) == 3:
-            fh = sum(li)
+    elif dice_list.count(6) == 2:
+        if dice_list.count(1) == 3:
+            fh = sum(dice_list)
+        elif dice_list.count(2) == 3:
+            fh = sum(dice_list)
+        elif dice_list.count(3) == 3:
+            fh = sum(dice_list)
+        elif dice_list.count(4) == 3:
+            fh = sum(dice_list)
+        elif dice_list.count(5) == 3:
+            fh = sum(dice_list)
 
     return fh
 
 
-def small_straight(li):
+def small_straight(dice_list):
     ss = 0
 
-    result = all(item in li for item in [1, 2, 3, 4]) or all(
-        item in li for item in [2, 3, 4, 5]) or all(item in li for item in [3, 4, 5, 6])
+    result = all(item in dice_list for item in [1, 2, 3, 4]) or all(
+        item in dice_list for item in [2, 3, 4, 5]) or all(item in dice_list for item in [3, 4, 5, 6])
 
     if result:
         ss = 15
@@ -111,19 +111,19 @@ def small_straight(li):
     return ss
 
 
-def large_straight(li):
+def large_straight(dice_list):
     ls = 0
 
-    if li == [1, 2, 3, 4, 5] or li == [2, 3, 4, 5, 6]:
+    if dice_list == [1, 2, 3, 4, 5] or dice_list == [2, 3, 4, 5, 6]:
         ls = 30
 
     return ls
 
 
-def yacht(li):
+def yacht(dice_list):
     yc = 0
 
-    if li[1:] == li[:-1]:
+    if dice_list[1:] == dice_list[:-1]:
         yc = 50
 
     return yc
